@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e3f2fd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .calculator {
+      background: #2196f3;
+      padding: 20px;
+      border-radius: 10px;
+      width: 220px;
+    }
+
+    #display {
+      background: #bbdefb;
+      color: black;
+      font-size: 24px;
+      text-align: right;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background: #64b5f6;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #42a5f5;
+    }
+
+    #clear {
+      grid-column: span 2;
+      background: #f44336;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <div id="display">0</div>
+    <div class="buttons">
+      <button>1</button><button>2</button><button>3</button><button>+</button>
+      <button>4</button><button>5</button><button>6</button><button>-</button>
+      <button>7</button><button>8</button><button>9</button><button>=</button>
+      <button>0</button><button id="clear">C</button>
+    </div>
+  </div>
+
+  <script>
+    const display = document.getElementById("display");
+    const buttons = document.querySelectorAll("button");
+    let input = "";
+
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener("click", function () {
+        let value = this.textContent;
+
+        if (value === "C") {
+          input = "";
+          display.textContent = "0";
+        } else if (value === "=") {
+          if (input !== "") {
+            try {
+              display.textContent = eval(input);
+              input = display.textContent;
+            } catch {
+              display.textContent = "Error";
+              input = "";
+            }
+          }
+        } else {
+          input += value;
+          display.textContent = input;
+        }
+      });
+    }
+  </script>
+</body>
+</html>
