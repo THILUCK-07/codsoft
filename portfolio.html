@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      background: #111;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav h2 {
+      color: #fff;
+      margin: 0;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      color: #4fa3ff;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url("hero-bg.jpg") center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .hero .btn {
+      background: #4fa3ff;
+      color: #fff;
+      padding: 12px 25px;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 5px;
+    }
+    .hero .btn:hover {
+      background: #2d7bd9;
+    }
+
+    /* About Section */
+    #about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 60px 50px;
+      background: #fff;
+    }
+    #about img {
+      flex: 1;
+      max-width: 300px;
+      border-radius: 10px;
+      margin: 20px;
+    }
+    #about .about-text {
+      flex: 2;
+      margin: 20px;
+    }
+    #about h2 {
+      margin-top: 0;
+      color: #111;
+    }
+    #about p {
+      margin: 15px 0;
+    }
+    #about .btn {
+      background: #4fa3ff;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    #about .btn:hover {
+      background: #2d7bd9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h2>Online Portfolio</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Your Name</h1>
+    <p>Hi, I am a Professional Web Developer with 5+ years of experience.</p>
+    <a href="#contact" class="btn">Hire Me</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <img src="your-photo.jpg" alt="Your Photo">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I am a passionate developer who loves blending creativity with technical expertise. 
+        My focus is on building modern, responsive, and user-friendly web applications.
+      </p>
+      <p>
+        Skilled in HTML, CSS, JavaScript, and frameworks like React, I bring ideas to life on the web.
+      </p>
+      <a href="resume.pdf" download class="btn">Download Resume</a>
+    </div>
+  </section>
+
+</body>
+</html>
